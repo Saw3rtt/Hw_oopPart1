@@ -1,10 +1,10 @@
 public class Slytherin extends Hogwarts {
-private int cunning;
-private int determination;
-private int ambition;
-private int resourcefulness;
+    private int cunning;
+    private int determination;
+    private int ambition;
+    private int resourcefulness;
 
-    public Slytherin(String name, String surname, int character, int cunning, int determination, int ambition, int resourcefulness,int magicPower) {
+    public Slytherin(String name, String surname, int character, int cunning, int determination, int ambition, int resourcefulness, int magicPower) {
         super(name, surname, character, magicPower);
         this.cunning = cunning;
         this.determination = determination;
@@ -12,35 +12,23 @@ private int resourcefulness;
         this.resourcefulness = resourcefulness;
     }
 
-    public int getCunning() {
-        return cunning;
+    @Override
+    public String toString() {
+        return "Лучший Слизерин " + super.toString();
     }
 
-    public void setCunning(int cunning) {
-        this.cunning = cunning;
+    public Slytherin compareSlytherinsStudent(Slytherin slytherinsStudent) {
+        int sumThis = this.cunning + this.determination + this.ambition + this.resourcefulness;
+        int sumSlyrtherinStudent = slytherinsStudent.cunning + slytherinsStudent.determination + slytherinsStudent.ambition + slytherinsStudent.resourcefulness;
+        Slytherin result = sumThis > sumSlyrtherinStudent ? this : slytherinsStudent;
+        return result;
     }
 
-    public int getDetermination() {
-        return determination;
-    }
-
-    public void setDetermination(int determination) {
-        this.determination = determination;
-    }
-
-    public int getAmbition() {
-        return ambition;
-    }
-
-    public void setAmbition(int ambition) {
-        this.ambition = ambition;
-    }
-
-    public int getResourcefulness() {
-        return resourcefulness;
-    }
-
-    public void setResourcefulness(int resourcefulness) {
-        this.resourcefulness = resourcefulness;
+    public static void compareSlytherinsStudents(Slytherin[] slytherins) {
+        Slytherin result = slytherins[0];
+        for (Slytherin slytherin : slytherins) {
+            if (!result.equals(slytherin)) result = result.compareSlytherinsStudent(slytherin);
+        }
+        System.out.println(result);
     }
 }

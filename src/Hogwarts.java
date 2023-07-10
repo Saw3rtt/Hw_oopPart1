@@ -1,4 +1,4 @@
-public class Hogwarts {
+public abstract class Hogwarts extends Object {
     private String name;
     private String surname;
     private int character;
@@ -19,28 +19,19 @@ public class Hogwarts {
         return magicPower;
     }
 
-    public void setMagicPower(int magicPower) {
-        this.magicPower = magicPower;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getSurname() {
         return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
     }
 
     public int getCharacter() {
         return character;
     }
 
-    public void setCharacter(int character) {
-        this.character = character;
-    }
+    @Override
+    public String toString() {
+        return "Имя " + name +
+                        " Фамилия " + surname;
 
+    }
 }
