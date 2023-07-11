@@ -22,29 +22,21 @@ public class Main {
                 new Hufflepuff("Джастин", "Джастин", 27, 2, 4, 5, 7),
         };
         System.out.println();
-        Gryffindor.compareStudents(gryffindors);
+        Compare.compareStudents(gryffindors);
         System.out.println();
-        Slytherin.compareSlytherinsStudents(slytherins);
+        Compare.compareSlytherinsStudents(slytherins);
         System.out.println();
-        Ravenclaw.compareRavenclawsStudents(ravenclaws);
+        Compare.compareRavenclawsStudents(ravenclaws);
         System.out.println();
-        Hufflepuff.compareHufflepuffStudents(hufflepuffs);
+        Compare.compareHufflepuffStudents(hufflepuffs);
         System.out.println();
-        comparison(slytherins, hufflepuffs);
+        Hogwarts.comparison(slytherins, hufflepuffs);
         System.out.println();
 
-    }
-
-    public static void comparison(Slytherin[] slytherins, Hufflepuff[] hufflepuffs) {
-        int studentPointsHufflepuffs = hufflepuffs[0].getMagicPower() + hufflepuffs[0].getCharacter();
-        int studentsPointsSlyzerins = slytherins[0].getMagicPower() + slytherins[0].getCharacter();
-        if (studentPointsHufflepuffs > studentsPointsSlyzerins) {
-            System.out.println(hufflepuffs[0].getName() + " " + hufflepuffs[0].getSurname() + " обладает большей мощностью магии, чем " + slytherins[0].getName() + " " + slytherins[0].getSurname());
-        } else {
-            System.out.println(slytherins[0].getName() + " " + slytherins[0].getSurname() + " обладает большей мощностью магии, чем " + hufflepuffs[0].getName() + " " + hufflepuffs[0].getSurname());
-        }
     }
 }
+
+
 
 
 

@@ -11,8 +11,13 @@ public class Hufflepuff extends Hogwarts {
     }
 
 
+    @Override
     public String toString() {
-        return "Лучший Пуффендуй " + super.toString();
+        return "Лучший Пуффендуй " + super.toString() +
+                " Пуффендуй " +
+                "industriousness = " + industriousness +
+                ", loyalty = " + loyalty +
+                ", honesty = " + honesty;
     }
 
     public Hufflepuff compareHufflepuffStudent(Hufflepuff hufflepuffStudent) {
@@ -22,11 +27,5 @@ public class Hufflepuff extends Hogwarts {
         return result;
     }
 
-    public static void compareHufflepuffStudents(Hufflepuff[] hufflepuffs) {
-        Hufflepuff result = hufflepuffs[0];
-        for (Hufflepuff hufflepuff : hufflepuffs) {
-            if (!result.equals(hufflepuffs)) result = result.compareHufflepuffStudent(hufflepuff);
-        }
-        System.out.println(result);
-    }
 }
+

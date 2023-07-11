@@ -11,9 +11,15 @@ public class Ravenclaw extends Hogwarts {
         this.wit = wit;
         this.fullOfCreativity = fullOfCreativity;
     }
+
     @Override
     public String toString() {
-        return "Лучший Когтевран " + super.toString();
+        return "Лучший Когтевран " + super.toString() +
+                " Когтевран " +
+                " smart = " + smart +
+                ", wisdom = " + wisdom +
+                ", wit = " + wit +
+                ", fullOfCreativity = " + fullOfCreativity;
     }
 
     public Ravenclaw compareRavenclawStudent(Ravenclaw ravenclawStudent) {
@@ -23,11 +29,4 @@ public class Ravenclaw extends Hogwarts {
         return result;
     }
 
-    public static void compareRavenclawsStudents(Ravenclaw[] ravenclaws) {
-        Ravenclaw result = ravenclaws[0];
-        for (Ravenclaw ravenclaw : ravenclaws) {
-            if (!result.equals(ravenclaws)) result = result.compareRavenclawStudent(ravenclaw);
-        }
-        System.out.println(result);
-    }
 }

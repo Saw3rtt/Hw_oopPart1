@@ -14,7 +14,12 @@ public class Slytherin extends Hogwarts {
 
     @Override
     public String toString() {
-        return "Лучший Слизерин " + super.toString();
+        return "Лучший Слизерин " + super.toString() + " " +
+                "Слизерин " +
+                "cunning = " + cunning +
+                ", determination = " + determination +
+                ", ambition = " + ambition +
+                ", resourcefulness = " + resourcefulness;
     }
 
     public Slytherin compareSlytherinsStudent(Slytherin slytherinsStudent) {
@@ -22,13 +27,5 @@ public class Slytherin extends Hogwarts {
         int sumSlyrtherinStudent = slytherinsStudent.cunning + slytherinsStudent.determination + slytherinsStudent.ambition + slytherinsStudent.resourcefulness;
         Slytherin result = sumThis > sumSlyrtherinStudent ? this : slytherinsStudent;
         return result;
-    }
-
-    public static void compareSlytherinsStudents(Slytherin[] slytherins) {
-        Slytherin result = slytherins[0];
-        for (Slytherin slytherin : slytherins) {
-            if (!result.equals(slytherin)) result = result.compareSlytherinsStudent(slytherin);
-        }
-        System.out.println(result);
     }
 }
