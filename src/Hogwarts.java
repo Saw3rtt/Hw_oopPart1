@@ -1,4 +1,4 @@
-public abstract class Hogwarts extends Object {
+public abstract class Hogwarts {
     private String name;
     private String surname;
     private int character;
@@ -31,16 +31,23 @@ public abstract class Hogwarts extends Object {
     @Override
     public String toString() {
         return "Имя " + name +
-                        " Фамилия " + surname;
+                " Фамилия " + surname;
 
     }
-    public static void comparison(Slytherin[] slytherins, Hufflepuff[] hufflepuffs) {
-        int studentPointsHufflepuffs = hufflepuffs[0].getMagicPower() + hufflepuffs[0].getCharacter();
-        int studentsPointsSlyzerins = slytherins[0].getMagicPower() + slytherins[0].getCharacter();
-        if (studentPointsHufflepuffs > studentsPointsSlyzerins) {
-            System.out.println(hufflepuffs[0].getName() + " " + hufflepuffs[0].getSurname() + " обладает большей мощностью магии, чем " + slytherins[0].getName() + " " + slytherins[0].getSurname());
+
+    public void comparison(Hogwarts student) {
+
+        int studentThis = this.getMagicPower() + this.getCharacter();
+
+        int studentHogwards = student.getMagicPower() + student.getCharacter();
+
+        if (studentThis > studentHogwards) {
+
+            System.out.println(this.getName() + " " + this.getSurname() + " обладает большей мощностью магии, чем " + student.getName() + " " + student.getSurname());
+
         } else {
-            System.out.println(slytherins[0].getName() + " " + slytherins[0].getSurname() + " обладает большей мощностью магии, чем " + hufflepuffs[0].getName() + " " + hufflepuffs[0].getSurname());
+
+            System.out.println(student.getName() + " " + student.getSurname() + " обладает большей мощностью магии, чем " + this.getName() + " " + this.getSurname());
         }
     }
 }

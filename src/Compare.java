@@ -1,10 +1,12 @@
-public class Compare { public static void compareHufflepuffStudents(Hufflepuff[] hufflepuffs) {
-    Hufflepuff result = hufflepuffs[0];
-    for (Hufflepuff hufflepuff : hufflepuffs) {
-        if (!result.equals(hufflepuffs)) result = result.compareHufflepuffStudent(hufflepuff);
+public class Compare {
+    public static void compareHufflepuffStudents(Hufflepuff[] hufflepuffs) {
+        Hufflepuff result = hufflepuffs[0];
+        for (Hufflepuff hufflepuff : hufflepuffs) {
+            if (!result.equals(hufflepuffs)) result = result.compareHufflepuffStudent(hufflepuff);
+        }
+        System.out.println(result);
     }
-    System.out.println(result);
-}
+
     public static void compareRavenclawsStudents(Ravenclaw[] ravenclaws) {
         Ravenclaw result = ravenclaws[0];
         for (Ravenclaw ravenclaw : ravenclaws) {
@@ -20,6 +22,7 @@ public class Compare { public static void compareHufflepuffStudents(Hufflepuff[]
         }
         System.out.println(result);
     }
+
     public static void compareStudents(Gryffindor[] gryffindors) {
         Gryffindor result = gryffindors[0];
         for (Gryffindor gryffindor : gryffindors) {

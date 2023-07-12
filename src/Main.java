@@ -30,7 +30,9 @@ public class Main {
         System.out.println();
         Compare.compareHufflepuffStudents(hufflepuffs);
         System.out.println();
-        Hogwarts.comparison(slytherins, hufflepuffs);
+        Hufflepuff hufflepuff = new Hufflepuff("Захария", "Смит", 50, 6, 7, 8, 4);
+        Slytherin slytherin = new Slytherin("Драко", "Малфой", 74, 7, 8, 9, 8, 9);
+        hufflepuff.comparison(slytherin);
         System.out.println();
 
     }
